@@ -7,6 +7,8 @@ describe('Homework 3', () => {
         const { fibonacciRecursion: fibonacciRecursion } = student;
         const { factorialIteration: factorialIteration } = student;
         const { factorialRecursion: factorialRecursion } = student;
+        const { gcd: gcd } = student;
+        const { lcd: lcd } = student;
 
         /* Correct input */
         expect(arrayNumbers([1,2,3,4,5,6], [5,6,7,8,9,0])).toEqual([1,2,3,4]);
@@ -28,6 +30,8 @@ describe('Homework 3', () => {
         expect(factorialRecursion(7)).toEqual(5040);
         expect(factorialRecursion(6)).toEqual(720);
 
+        expect(gcd(1071,462)).toEqual(21);
+        expect(lcd(72,99)).toEqual(792);
 
 
         /* Not correct input */

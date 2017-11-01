@@ -50,6 +50,14 @@ function factorialRecursion(num) {
     return num === 0 ? 1 : num * factorialRecursion(num - 1);
 }
 
+function gcd(x, y) {
+    return x % y === 0 ? y : gcd(y, x % y);
+}
+
+function lcd(x, y) {
+    return x * y / gcd(x, y);
+}
+
 module.exports = {
     firstName: 'Oleg',
     secondName: 'Zamyslov',
@@ -57,5 +65,7 @@ module.exports = {
     fibonacciIteration: fibonacciIteration,
     fibonacciRecursion: fibonacciRecursion,
     factorialIteration: factorialIteration,
-    factorialRecursion: factorialRecursion
+    factorialRecursion: factorialRecursion,
+    gcd: gcd,
+    lcd: lcd
 };
